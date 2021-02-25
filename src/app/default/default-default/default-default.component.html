@@ -1,0 +1,71 @@
+<div class="container mt-3">
+    <div class="card">
+        <div class="card-header">
+            <div class=" text-center mt-2">
+                <h1>Login</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-md-6 jumbotron">
+                <form [formGroup]='lg'>
+                    <div [hidden]="show">
+                        <div class="form-group">
+                            <input type="text" placeholder="enter the user name" formControlName="username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" placeholder="enter the password" formControlName="password">
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-primary" (click)="login()">Login</button>&nbsp;
+                            <button class="btn btn-info" (click)="new_user()">New User</button>&nbsp;
+                            <button class="btn btn-danger" (click)="forget_user()">Forget login?</button>
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+                <div [hidden]="new_u">
+                    <form [formGroup]="n_user">
+                        <div class="form-group">
+                            <input type="text" formControlName="name" placeholder="enter your name...">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" formControlName="user_n" placeholder="enter your username...">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" placeholder="password">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" formControlName="pass" placeholder="confirm password">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" formControlName="phone" placeholder="enter your contact..."
+                                maxlength="10">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" (click)="new_user()">Register</button>&nbsp;
+                            <button class="btn btn-primary" (click)="login()">Login</button>&nbsp;
+                        </div>
+                    </form>
+                </div>
+
+                <div [hidden]="frag">
+                    <div class="col-md-6">
+                        <input class="mt-2" type="text" [(ngModel)]="sear" placeholder="enter username or phone number" value=""><br>
+                        <input class="mt-2" type="password" placeholder="enter password"><br>
+                        <input class="mt-2" type="password" [(ngModel)]="password_" placeholder="enter confirm password"><br>
+                        <button class="btn btn-warning mt-2" (click)="forget($event)">Reset</button>&nbsp;
+                        <button class="btn btn-primary mt-2" (click)="login()">Login</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

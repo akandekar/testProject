@@ -1,0 +1,137 @@
+{
+  "register": [
+    {
+      "name": "akshay",
+      "username": "akshay",
+      "password": "999999",
+      "contact": "8888888888",
+      "id": 1
+    },
+    {
+      "name": "bujkugy",
+      "address": "yfguhij",
+      "contact": "7984512349",
+      "dob": "2021-02-17",
+      "email": "tfyguhij@gmail.com",
+      "ph_url": "../../../assets/image/b1.jpg",
+      "id": 2
+    },
+    {
+      "name": "ughikjl@gmail.com",
+      "address": "ughikjl@gmail.com",
+      "contact": "8741325648",
+      "dob": "2021-02-07",
+      "email": "ughikjl@gmail.com",
+      "ph_url": "../../../assets/image/b1.jpg",
+      "id": 3
+    },
+    {
+      "name": "w4ertyguh@gmail.com",
+      "address": "w4ertyguh@gmail.com",
+      "contact": "7984123149",
+      "dob": "2021-02-10",
+      "email": "w4ertyguh@gmail.com",
+      "ph_url": "../../../assets/image/b2.jpg",
+      "id": 4
+    },
+    {
+      "name": "rsedtfyguh@gmail.com",
+      "address": "rsedtfyguh@gmail.com",
+      "contact": "8525852852",
+      "dob": "2021-02-09",
+      "email": "rsedtfyguh@gmail.com",
+      "ph_url": "../../../assets/image/b1.jpg",
+      "id": 5
+    },
+    {
+      "name": "yugjoilk@gmail.com",
+      "address": "yugjoilk@gmail.com",
+      "contact": "9999996532",
+      "dob": "2021-02-09",
+      "email": "yugjoilk@gmail.com",
+      "ph_url": "../../../assets/image/b1.jpg",
+      "id": 6
+    },
+    {
+      "name": "yugjoilk@gmail.com",
+      "address": "yugjoilk@gmail.com",
+      "contact": "9999996532",
+      "dob": "2021-02-09",
+      "email": "yugjoilk@gmail.com",
+      "ph_url": "../../../assets/image/b1.jpg",
+      "id": 7
+    },
+    {
+      "name": "fdvfdvfvfdvfdv",
+      "address": "dv dfvfdv",
+      "contact": "5555555555",
+      "dob": "2021-02-15",
+      "email": "dcdsac@gmail.com",
+      "id": 8
+    }
+  ],
+  "login": [
+    {
+      "username": "admin",
+      "password": "123456"
+    }
+  ],
+  "newuser": [
+    {
+      "name": "akshay",
+      "username": "akshay",
+      "password": "222222",
+      "contact": "8888888888",
+      "id": 1
+    },
+    {
+      "name": "ak",
+      "username": "123123",
+      "password": "5555555555",
+      "contact": "ak",
+      "id": 2
+    },
+    {
+      "name": "sd",
+      "username": "sd",
+      "password": "123123",
+      "contact": "9999999999",
+      "id": 3
+    },
+    {
+      "name": "sd",
+      "username": "sd",
+      "password": "123123",
+      "contact": "9999999999",
+      "id": 4
+    },
+    {
+      "name": "xyz",
+      "username": "xyz",
+      "password": "123123",
+      "contact": "1111111111",
+      "id": 5
+    },
+    {
+      "name": "zzzz",
+      "username": "zzzz",
+      "password": "444444",
+      "contact": "4444444444",
+      "id": 6
+    },
+    {
+      "name": "xxxxx",
+      "username": "xxxxx",
+      "password": "777777",
+      "contact": "0000000000",
+      "id": 7
+    },
+    {
+      "name": "ll",
+      "username": "ll",
+      "password": "8888888",
+      "contact": "5555555555",
+      "id": 8
+    }
+  ]
+}

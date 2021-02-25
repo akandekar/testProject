@@ -1,0 +1,135 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header">
+            <div class="text-left">
+                <h2>Welcome {{c_user.username}}</h2>
+            </div>
+            <div class="text-center mt-2">
+                <h1>Contact records</h1>
+            </div>
+            <div class="text-right">
+                    <button class="btn btn-outline-danger" (click)="logout()">Logout {{c_user.username}}</button>&nbsp;
+                    <button class="btn btn-outline-warning" (click)="open(mymodal)">Change password</button>
+                </div>
+        </div>
+        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="table table-bordered table-striped mb-0">
+                        <thead>
+                                <tr>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Birth Date</th>
+                                        <th>Email</th>
+                                        <th>Contact</th>
+                                        <th>Edit</th>
+                                        <th>delete</th>
+                                    </tr>
+                        </thead>
+                        <tbody>
+                                <tr *ngFor="let reg of registration">
+                                        <td>{{reg.name}}</td>
+                                        <td>{{reg.address}}</td>
+                                        <td>{{reg.dob}}</td>
+                                        <td>{{reg.email}}</td>
+                                        <td>{{reg.contact}}</td>
+                                        <td (click)="edit_record(reg)"><i class='material-icons' style="color:blue">edit</i></td>
+                                        <td (click)="delete_record(reg)"><i class="material-icons" style="color: red;">delete</i></td>
+                                    </tr>
+                        </tbody>
+                </table>          
+            </div>
+        
+
+    </div>
+</div>
+
+<div class="container mt-3 " id="d1">
+    <div class="card">
+        <div class="card-header">
+            <div class="text-center mt-2">
+                <h2>Contact Details</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container col-md-6 jumbotron">
+                <form [formGroup]='entry'>
+                    <div class="form-group">
+                        <label class="center-block">Name:
+                            <input type="text" class="form-control" formControlName="name">
+
+                            <div *ngIf="f.name.touched && f.name.invalid && er" class="alert alert-danger">
+                                <div *ngIf="f.name.errors.required">Name is required.</div>
+                                <div *ngIf="f.name.errors.minlength">Name should be 3 character.</div>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="center-block">Address:
+                            <input type="text" class="form-control" formControlName="address">
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="center-block">Contact:
+                            <input type="text" class="form-control" formControlName="contact" maxlength="10">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your contact details with anyone else.</small>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="center-block">Date of Birth:
+                            <input type="date" class="form-control" formControlName="dob">
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="center-block">Email:
+                            <input type="email" class="form-control" aria-describedby="emailHelp" formControlName="email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <div *ngIf="f.email.touched && f.email.invalid && er" class="alert alert-danger">
+                                <div *ngIf="f.email.errors.required">Email is required.</div>
+                                <div *ngIf="f.email.errors.email">Please, enter valid email address.</div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="center-block">Upload Photo:
+
+                            <input style="display: none" type="file" accept=".png, .jpg, .jpeg"
+                                (change)="onFileChanged($event)" #fileInput>
+                            <button (click)="fileInput.click()">Select File</button>
+                            <img *ngIf="path" id="ig" [src]="path">
+                        </label>
+                    </div>
+                    <button type="button" *ngIf="show_submit" class="btn btn-outline-primary"
+                        (click)="register()">Submit</button>
+                    <button type="button" *ngIf="!show_submit" class="btn btn-outline-warning"
+                        (click)="update_record()">Update</button>
+                </form>
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- MODEL -->
+   
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Change password</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <input type="text" [(ngModel)]="f_user" placeholder="enter your contact no here" style="border: 2px solid black;width: 100%;"><br>
+    <input class="mt-3" type="password" [(ngModel)]="f_pass" placeholder="enter your password no here" style="border: 2px solid black;width: 100%;">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="forget_password()" (mouseup)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template>
